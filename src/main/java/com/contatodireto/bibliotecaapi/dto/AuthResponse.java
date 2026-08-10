@@ -1,4 +1,4 @@
 package com.contatodireto.bibliotecaapi.dto;
 
-public record AuthResponse() {
+public record AuthResponse(String token) {
 }
