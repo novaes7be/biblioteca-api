@@ -24,6 +24,7 @@ public class AuthService {
     final JwtService jwtService;
 
 
+
     public AuthResponse login(LoginRequest request) {
         User user = userRepository.findByEmail(request.email()).orElseThrow(() -> new BadCredentialsException("Credentials invalid"));
         if (!passwordEncoder.matches(request.password(), user.getPassword())) {
